@@ -1,4 +1,4 @@
-[# Greetings, I'm Justino Macosso](https://github.com/JustinoMac/JustinoMac.github.io/blob/main/README.md)
+# Greetings, I'm Justino Macosso
 
 I was born in Angola, raised in Canada and introduced to the world of technology while completing my high school in Japan.
 I'm currently a student in Ankara Yildirim Beyazit University pursuing a Computer Engineering degree. My area of interest is Cybersecuirty with an emphasis  in cryptography, Red Teaming, Governance, Risk and Compliance and Secure DevOps.

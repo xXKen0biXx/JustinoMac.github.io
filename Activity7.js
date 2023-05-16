@@ -61,7 +61,7 @@ function addScore()
 	}
 	else
 	{
-		alert("Enter a valid Score");
+		alert("Enter aa valid Score");
 		
 	}
 	$("name").value = ""; 

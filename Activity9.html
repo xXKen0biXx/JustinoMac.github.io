@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <title>Image Swap</title>
+	<link rel="stylesheet" href="Activity9.css" />
+	<script src="jquery.js"></script>
+</head>
+
+<body>
+	<main>
+		<h1>Ram Tap Combined Test</h1>
+	    <ul id="image_list">
+	        <li><a href="images/h1.jpg" title="James Allison: 1-1">
+	        	<img src="thumbnails/t1.jpg" alt=""></a></li>
+	        <li><a href="images/h2.jpg" title="James Allison: 1-2">
+	        	<img src="thumbnails/t2.jpg" alt=""></a></li>
+	        <li><a href="images/h3.jpg" title="James Allison: 1-3">
+	        	<img src="thumbnails/t3.jpg" alt=""></a></li>
+	        <li><a href="images/h4.jpg" title="James Allison: 1-4">
+	        	<img src="thumbnails/t4.jpg" alt=""></a></li>
+	        <li><a href="images/h5.jpg" title="James Allison: 1-5">
+	        	<img src="thumbnails/t5.jpg" alt=""></a></li>
+	        <li><a href="images/h6.jpg" title="James Allison: 1-6">
+	        	<img src="thumbnails/t6.jpg" alt=""></a></li>
+	    </ul>
+	    <h2 id="caption">James Allison: 1-1</h2>               
+	    <p><img src="images/h1.jpg" alt="" id="image"></p>
+	</main>	
+	
+    
+	<script>
+    // For some reason my code is only working if I add it here so I added here and seperately    
+		$(document).ready(function() {
+  // preload images
+  $("#image_list a").each(function() {
+    var swappedImage = new Image();
+    swappedImage.src = $(this).attr("href");
+  });
+
+  // set up event handlers for links
+  $("#image_list a").click(function(evt) {
+    evt.preventDefault();
+
+    var imageURL = $(this).attr("href");
+    var caption = $(this).attr("title");
+
+    // Fade out current caption and image
+    $("#caption, #image").fadeOut(1000, function() {
+      // Update caption and image source
+      $("#image").attr("src", imageURL);
+      $("#caption").text(caption);
+
+      // Fade in new caption and image
+      $("#caption, #image").fadeIn(1000);
+    });
+  }); // end click
+
+  // move focus to first thumbnail
+  $("li:first-child a").focus();
+}); // end ready
+	</script>
+</body>
+</html>
